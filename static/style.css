@@ -1,0 +1,97 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  text-align:center;
+}
+.topnav {
+  background-color: #333;
+  overflow: hidden; 
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+#cadastro-ativos, #cadastro-local {
+  background-color: #ddd;
+}
+
+.form {
+  width: 100%;
+}
+
+form {
+  padding: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 30%;
+  min-width: 31.25rem
+}
+form input, textarea, select {
+  padding: 0.5rem; 
+  border-radius: 0.25rem;
+  border: none;
+  background-color: #bbb;
+}
+form div {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex; 
+  flex-direction: column;
+}
+.ativos-select{
+  display: grid;
+  flex-direction: row;
+
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
+}
+
+.ativos-select button {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  width: 50%;
+
+  border-radius: 0.25rem;
+  border: none;
+
+  background-color: #fff;
+}
+
+.ativos-select button:hover {
+  transition: 0.2s background-color;
+  background-color: #ccc;
+
+}
+form buttton {
+  width: 100%;
+  border: none
+}
+.local-inputs {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nome-input input{
+}

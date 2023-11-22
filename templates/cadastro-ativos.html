@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  
+  <title>Controle de Ativos</title>
+</head>
+
+<body>
+  <div class="topnav">
+    <a href="{{ url_for('cadastroAtivos') }}"onclick="showCadAtivos()">Cadastro de Ativos</a>
+    <a href="{{ url_for('index') }}"onclick="showCadLocal()">Cadastro de Localização</a>
+  </div>
+
+  <div id="cadastro-ativos">
+    <h1>Cadastro de Ativos Físicos</h1>
+    <div class="form">
+      <form action="">
+        <div>
+          <label for="patrimonio">Patrimônio Ativo</label>
+          <input id="patrimonio" type="text" placeholder="Digite o nome do patrimônio">
+        </div>
+
+        <div>
+          <label for="modelo">Modelo do Ativo</label>
+          <input id="modelo" type="text" placeholder="Digite do modelo do ativo">
+        </div>
+
+        <div>
+          <label for="fabricante">Fabricante do Ativo</label>
+          <input id="fabricante" type="text" placeholder="Digite do fabricante do ativo">
+        </div>
+
+        <div>
+          <label for="descricao">Descrição do Ativo</label>
+          <textarea name="descricao" id="descricao" cols="40" rows="5">
+          </textarea>
+        </div>
+
+        <div>
+          <label for="numero_serie">Número de série do Ativo</label>
+          <input id="numero_serie" type="text" placeholder="Digite do número de série do ativo">
+        </div>
+
+        <div>
+          <label for="data_vencimento_garantia">Data de vencimento da garantia do Ativo</label>
+          <input id="data_vencimento_garantia" type="date" placeholder="Selecione a data de vencimento da garantia do ativo">
+        </div>
+
+        <div>
+          <label for="data_aquisicao_ativo">Data de aquisição da garantia do Ativo</label>
+          <input id="data_aquisicao_ativo" type="date" placeholder="Selecione a Data de aquisição da garantia do ativo">
+        </div>
+
+        <div>
+          <label for="valor_ativo">Valor do Ativo</label>
+          <input id="valor_ativo" type="number" placeholder="Digite do valor do ativo">
+        </div>
+        
+        <div>
+          <label for="grupo_patrimonial">Grupo Patrimonial do Ativo</label>
+          <input id="grupo_patrimonial" type="text" placeholder="Digite do grupo patrimonial do ativo">
+        </div>
+
+        <div class="ativos-local">
+          <label for="localizacao">Selecione a localização do Ativo</label>
+          <div class="ativos-select">
+            <select name="localizacao_id" id="localizacao_id">
+              <option value="id_1">Localização 1</option>
+              <option value="id_2">Localização 2</option>
+              <option value="id_3">Localização 3</option>
+              <option value="id_4">Localização 4</option>
+            </select>
+            <button onclick="showCadAtivos()">Cadastrar uma nova localização</button>
+          </div>
+        </div>
+        
+
+        <button type="submit">Enviar</button>
+      </form>
+
+    </div>
+  </div>  
+</body>
+</html>
