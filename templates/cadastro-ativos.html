@@ -1,42 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{% extends "layout.html" %} 
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-  
-  <title>Controle de Ativos</title>
-</head>
-
-<body>
-  <div class="topnav">
-    <a href="{{ url_for('cadastroAtivos') }}"onclick="showCadAtivos()">Cadastro de Ativos</a>
-    <a href="{{ url_for('index') }}"onclick="showCadLocal()">Cadastro de Localização</a>
-  </div>
+{% block title%} - Ativos {% endblock%} 
+{% block main %} 
 
   <div id="cadastro-ativos">
     <h1>Cadastro de Ativos Físicos</h1>
     <div class="form">
-      <form action="">
+      <form action="/cadastro" method="post">
         <div>
           <label for="patrimonio">Patrimônio Ativo</label>
-          <input id="patrimonio" type="text" placeholder="Digite o nome do patrimônio">
+          <input autocomplete="off" id="patrimonio" name="patrimonio" type="text" placeholder="Digite o código do Patrimônio">
         </div>
 
         <div>
           <label for="modelo">Modelo do Ativo</label>
-          <input id="modelo" type="text" placeholder="Digite do modelo do ativo">
-        </div>
-
-        <div>
-          <label for="fabricante">Fabricante do Ativo</label>
-          <input id="fabricante" type="text" placeholder="Digite do fabricante do ativo">
+          <input id="modelo" autocomplete="off" name="modelo" type="text" placeholder="Digite do modelo do ativo">
         </div>
 
         <div>
@@ -66,28 +44,37 @@
         </div>
         
         <div>
-          <label for="grupo_patrimonial">Grupo Patrimonial do Ativo</label>
+          <label for="grupo_patrimonial">Selecione o Grupo Patrimonial do Ativo</label>
           <input id="grupo_patrimonial" type="text" placeholder="Digite do grupo patrimonial do ativo">
+          <div class="ativos-select">
+            <select name="localizacao_id" id="localizacao_id">
+              <option value="1">Computador</option>
+              <option value="2">Periférico</option>
+              <option value="3">Hardware</option>
+              <option value="4">Impressoras</option>
+              <option value="5">Projetores</option>
+              <option value="6">Rede</option>
+            </select>
+          </div>
         </div>
 
         <div class="ativos-local">
           <label for="localizacao">Selecione a localização do Ativo</label>
           <div class="ativos-select">
             <select name="localizacao_id" id="localizacao_id">
-              <option value="id_1">Localização 1</option>
-              <option value="id_2">Localização 2</option>
-              <option value="id_3">Localização 3</option>
-              <option value="id_4">Localização 4</option>
+              <option value="1">Localização 1</option>
+              <option value="2">Localização 2</option>
+              <option value="3">Localização 3</option>
+              <option value="4">Localização 4</option>
             </select>
-            <button onclick="showCadAtivos()">Cadastrar uma nova localização</button>
           </div>
         </div>
         
 
         <button type="submit">Enviar</button>
+        <a href="{{ url_for('ativos') }}">Ver cadastros</a>
       </form>
-
     </div>
+    <hr>
   </div>  
-</body>
-</html>
+  {% endblock %}
