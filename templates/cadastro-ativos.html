@@ -13,12 +13,7 @@
         </div>
 
         <div>
-          <label for="modelo">Modelo do Ativo</label>
-          <input id="modelo" autocomplete="off" name="modelo" type="text" placeholder="Digite do modelo do ativo">
-        </div>
-
-        <div>
-          <label for="modelo">Selecione o modelo Patrimonial do Ativo</label>
+          <label for="modelo">Modelo Patrimonial do Ativo</label>
           <select name="modelo" id="modelo">
             <option value="1">OptiPlex Micro</option>
             <option value="2">Vostro Small Dell</option>
@@ -27,19 +22,11 @@
             <option value="5">Workstation precision dell</option>
             <option value="6">Dell 18.5 E1920H</option>
             <option value="7">Brother HL-L6402DW</option>
-            <option value="8">Epson Powerlite X29 3lcd</option>            
+            <option value="8">Epson Powerlite X29 3lcd</option>
+            {% for id_modelo in modelos %}
+            <option value="{{ id_modelo }}">{{ modelo }}</option>
+            {% endfor %}      
           </select>
-        </div>
-
-        <div>
-          <label for="descricao">Descrição do Ativo</label>
-          <textarea name="descricao" id="descricao" cols="40" rows="5">
-          </textarea>
-        </div>
-
-        <div>
-          <label for="numero_serie">Número de série do Ativo</label>
-          <input id="numero_serie" type="text" placeholder="Digite do número de série do ativo">
         </div>
 
         <div>
