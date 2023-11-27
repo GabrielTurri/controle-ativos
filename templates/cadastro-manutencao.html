@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %} - Manutenção {% endblock%} 
+{% block main %}
+  <h1>Cadastro de Manutenção</h1>
+  <div>
+    <form action="/cadastrar-manutencao" method="post">
+      <div>
+        <label for="data-manutencao">Data da manutenção:</label>
+        <input id="data-manutencao" name="data-manutencao" type="date">
+      </div>
+
+      <div>
+        <label for="data-prox-manutencao">Data da próxima manutenção:</label>
+        <input id="data-prox-manutencao" name="data-prox-manutencao" type="date">
+      </div>
+      <div>
+        <label for="departamento">Selecione o ativo da manutenção</label>
+        <select name="grupo" id="ativo">
+            {% for patrimonio in ativos %}
+            <option value="1">{{ patrimonio }}</option>
+            {% endfor %}
+          </select>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+
+  </div>
+
+{% endblock %}

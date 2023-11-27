@@ -1,6 +1,6 @@
 {% extends "layout.html" %} 
 
-{% block title%} - Ativos {% endblock%} 
+{% block title %} - Ativos {% endblock%} 
 {% block main %} 
 
   <div id="cadastro-ativos">
@@ -15,6 +15,20 @@
         <div>
           <label for="modelo">Modelo do Ativo</label>
           <input id="modelo" autocomplete="off" name="modelo" type="text" placeholder="Digite do modelo do ativo">
+        </div>
+
+        <div>
+          <label for="modelo">Selecione o modelo Patrimonial do Ativo</label>
+          <select name="modelo" id="modelo">
+            <option value="1">OptiPlex Micro</option>
+            <option value="2">Vostro Small Dell</option>
+            <option value="3">Vostro Small Dell - TI</option>
+            <option value="4">Inspiron Desktop Dell</option>
+            <option value="5">Workstation precision dell</option>
+            <option value="6">Dell 18.5 E1920H</option>
+            <option value="7">Brother HL-L6402DW</option>
+            <option value="8">Epson Powerlite X29 3lcd</option>            
+          </select>
         </div>
 
         <div>
@@ -45,31 +59,32 @@
         
         <div>
           <label for="grupo_patrimonial">Selecione o Grupo Patrimonial do Ativo</label>
-          <input id="grupo_patrimonial" type="text" placeholder="Digite do grupo patrimonial do ativo">
-          <div class="ativos-select">
-            <select name="localizacao_id" id="localizacao_id">
-              <option value="1">Computador</option>
-              <option value="2">Periférico</option>
-              <option value="3">Hardware</option>
-              <option value="4">Impressoras</option>
-              <option value="5">Projetores</option>
-              <option value="6">Rede</option>
-            </select>
-          </div>
+          <select name="grupo" id="localizacao_id">
+            <option value="1">Computador</option>
+            <option value="2">Periférico</option>
+            <option value="3">Hardware</option>
+            <option value="4">Impressoras</option>
+            <option value="5">Projetores</option>
+            <option value="6">Rede</option>
+          </select>
         </div>
 
         <div class="ativos-local">
-          <label for="localizacao">Selecione a localização do Ativo</label>
+          <label for="localizacao">Selecione a localização/departamento do Ativo</label>
           <div class="ativos-select">
             <select name="localizacao_id" id="localizacao_id">
-              <option value="1">Localização 1</option>
-              <option value="2">Localização 2</option>
-              <option value="3">Localização 3</option>
-              <option value="4">Localização 4</option>
+              <option value="1">Recepção</option>
+              <option value="2">Administração</option>
+              <option value="3">RH</option>
+              <option value="4">Financeiro</option>
+              <option value="5">Gerência</option>
+              <option value="6">TI</option>
+              <option value="7">Laboratório de Informática</option>
+              <option value="8">Laboratório de Hardware</option>
+              <option value="9">Sala Servidor</option>
             </select>
           </div>
         </div>
-        
 
         <button type="submit">Enviar</button>
         <a href="{{ url_for('ativos') }}">Ver cadastros</a>

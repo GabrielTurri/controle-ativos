@@ -19,6 +19,10 @@ def cadastro():
     ATIVOS[patrimonio] = modelo
     return render_template('cadastro.html')
 
+@app.route('/cadastro-manutencao', methods=["GET","POST"])
+def cadastroManutencao():
+    return render_template('cadastro-manutencao.html', ativos=ATIVOS)
+
 @app.route('/ativos')
 def ativos():
     return render_template('ativos.html', ativos=ATIVOS)
