@@ -15,8 +15,8 @@
         <input id="data-prox-manutencao" name="data-prox-manutencao" type="date">
       </div>
       <div>
-        <label for="departamento">Selecione o ativo da manutenção</label>
-        <select name="grupo" id="ativo">
+        <label for="ativo">Selecione o ativo da manutenção</label>
+        <select name="ativo" id="ativo">
             {% for patrimonio in ativos %}
             <option value="1">{{ patrimonio }}</option>
             {% endfor %}

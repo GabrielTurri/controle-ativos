@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
+  {% block head %}{% endblock %}
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   
   <title>Controle de Ativos{% block title %}{% endblock %}</title>
@@ -20,8 +20,8 @@
     <a href="{{ url_for('cadastroManutencao') }}">Cadastro de Manutenção</a>
     <a href="{{ url_for('index') }}">Cadastro de Departamento</a>
     <a href="{{ url_for('cadastroModelo') }}">Cadastro de Modelos de ativo </a>
-    <a href="">Cadastro de Grupo Patrimonial</a>
-    <a href="">Cadastro de Licenças</a>
+    <a href="{{ url_for('cadastroGrupo') }}">Cadastro de Grupo Patrimonial</a>
+    <a href="{{ url_for('cadastroLicenca') }}">Cadastro de Licenças</a>
   </div>
 
   <main>

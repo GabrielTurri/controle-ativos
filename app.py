@@ -27,6 +27,14 @@ def cadastroManutencao():
 def cadastroModelo():
     return render_template('cadastro-modelo.html')
 
+@app.route('/cadastro-grupo', methods=["GET","POST"])
+def cadastroGrupo():
+    return render_template('cadastro-grupo.html')
+
+@app.route('/cadastro-licenca', methods=["GET","POST"])
+def cadastroLicenca():
+    return render_template('cadastro-licenca.html')
+
 @app.route('/ativos')
 def ativos():
     return render_template('ativos.html', ativos=ATIVOS)
