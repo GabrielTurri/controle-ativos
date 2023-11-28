@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %} - Grupo Patrimonial {% endblock%} 
+{% block main %}
+
+<form action="">
+  <div>
+    <label for="nome-grupo">Nome do Grupo</label>
+    <input type="text" name="nome-grupo" name="Digite o nome do grupo patrimonial">
+  </div>
+  <button type="submit">Enviar</button>
+</form>
+<h1>Grupos cadastrados</h1>
+  {% for patrimonio in ativos %}
+  <div>
+    <div>      
+      <p><b>Código do Patrimônio: {{ patrimonio }}</b></p>
+      <p>Modelo do Patrmônio: {{ ativos[patrimonio] }}</p>
+      <p>Grupo Patrimonial do Ativo: </p>
+    </div>
+    <div>
+      <a href="">Editar</a>
+      <a href="">Excluir</a>
+    </div>
+  </div>
+  <hr>
+  {% endfor %}
+{% endblock %}

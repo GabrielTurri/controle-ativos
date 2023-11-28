@@ -29,7 +29,7 @@ def cadastroModelo():
 
 @app.route('/cadastro-grupo', methods=["GET","POST"])
 def cadastroGrupo():
-    return render_template('cadastro-grupo.html')
+    return render_template('cadastro-grupo.html', ativos=ATIVOS)
 
 @app.route('/cadastro-licenca', methods=["GET","POST"])
 def cadastroLicenca():
