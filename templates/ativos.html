@@ -6,18 +6,24 @@
     <h2>Ativos Cadastrados</h2>
 
     {% for patrimonio in ativos %}
-    <div>      
-      <p><b>Código do Patrimônio: {{ patrimonio }}</b></p>
-      <p>Modelo do Patrmônio: {{ ativos[patrimonio] }}</p>
-      <!-- <p>Fabricante do Ativo</p>
-      <p>Descrição do Ativo</p>          
-      <p>Número de série do Ativo</p> -->
-      <p>Data de vencimento da garantia do Ativo</p>
-      <p>Data de aquisição da garantia do Ativo</p>
-      <p>Data de desativação do Ativo</p>
-      <p>Valor do Ativo</p>
-      <p>Grupo Patrimonial do Ativo</p>
-      <p>Selecione a localização do Ativo</p> 
+    <div>
+      <div>      
+        <p><b>Código do Patrimônio: {{ patrimonio }}</b></p>
+        <p>Modelo do Patrmônio: {{ ativos[patrimonio] }}</p>
+        <!-- <p>Fabricante do Ativo</p>
+        <p>Descrição do Ativo</p>          
+        <p>Número de série do Ativo</p> -->
+        <p>Data de vencimento da garantia do Ativo: </p>
+        <p>Data de aquisição da garantia do Ativo: </p>
+        <p>Data de desativação do Ativo: </p>
+        <p>Valor do Ativo: </p>
+        <p>Grupo Patrimonial do Ativo: </p>
+        <p>Selecione a localização do Ativo: </p> 
+      </div>
+      <div>
+        <a href="">Editar</a>
+        <a href="">Excluir</a>
+      </div>
     </div>
     <hr>
     {% endfor %}

@@ -33,7 +33,7 @@ def cadastroGrupo():
 
 @app.route('/cadastro-licenca', methods=["GET","POST"])
 def cadastroLicenca():
-    return render_template('cadastro-licenca.html')
+    return render_template('cadastro-licenca.html', ativos=ATIVOS)
 
 @app.route('/ativos')
 def ativos():

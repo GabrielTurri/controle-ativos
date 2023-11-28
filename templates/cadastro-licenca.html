@@ -1,6 +1,33 @@
 {% extends "layout.html" %} 
 
 {% block title%} - Licenças {% endblock%} 
-{% block main %} 
 
+{% block main %} 
+<form action="">
+  <div>
+    <label for="nome-software">Nome software*</label>
+    <input type="text" name="nome-software">
+  </div>
+  <div>
+    <label for="ativo">Ativo</label>
+    <select name="ativo" id="ativo">
+        {% for patrimonio in ativos %}
+        <option value="1">{{ patrimonio }}</option>
+        {% endfor %}
+      </select>
+  </div>
+  <div>
+    <label for="valor-aquisicao">Valor de aquisição do software*</label>
+    <input type="text" name="valor-aquisicao">
+  </div>
+  <div>
+    <label for="aquisicao-software">Data de aquisição software</label>
+    <input type="date" name="aquisicao-software">
+  </div>
+  <div>
+    <label for="expiracao-software">Data de expiração software</label>
+    <input type="date" name="expiracao-software">
+  </div>
+  <button type="submit">Enviar</button>
+</form>
 {% endblock %}
