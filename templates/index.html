@@ -1,26 +1,19 @@
 {% extends "layout.html" %} 
 
-{% block title%} - Localização {% endblock%} 
 {% block main %} 
 
-  <div id="cadastro-local">
-    <h1>Cadastro de Localização</h1>
-
-    <form action="">
-      <div class="local-inputs">
-        <div class="nome-input">
-          <label for="nome_local">Nome da Localização:</label>
-          <input id="nome_local "type="text" placeholder="Digite o nome da localização">
-        </div>
-        <div class="data-input">
-          <label for="data_local">Data da Localização:</label>
-          <input id="data_local "type="date" placeholder="Digite o data da localização">
-        </div>
-      </div>
-      <input type="button" value="Enviar" onClick="showCadLocal()">
-    </form>
-  </div>
   <div>
-    <h1>Tabela de Localizações cadastradas</h1>
+    <h1>Login</h1>
+    <div>
+      <label for="username">Usuário:</label>
+      <input type="text">
+    </div>
+    <div>
+      <label for="senha">Senha:</label>
+      <input type="password">
+    </div>
+    <a href="{{ url_for('cadastroAtivos') }}">
+      <button>Entrar</button>
+    </a>
   </div>
 {% endblock %}
