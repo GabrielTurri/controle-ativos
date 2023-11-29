@@ -23,6 +23,10 @@ def cadastro():
 def cadastroManutencao():
     return render_template('cadastro-manutencao.html', ativos=ATIVOS)
 
+@app.route('/cadastro-departamento.html', methods=["GET","POST"])
+def cadastroDepartamento():
+    return render_template('cadastro-departamento.html')
+    
 @app.route('/cadastro-modelo', methods=["GET","POST"])
 def cadastroModelo():
     return render_template('cadastro-modelo.html')

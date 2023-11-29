@@ -8,14 +8,13 @@
     <div class="form">
       <form action="/cadastro" method="post">
         <div>
-          <label for="patrimonio">Patrimônio Ativo*</label>
+          <label for="patrimonio">Patrimônio Ativo</label>
           <input autocomplete="off" id="patrimonio" name="patrimonio" type="text" placeholder="Digite o código do Patrimônio">
         </div>
 
         <div>
-          <label for="modelo">Modelo Patrimonial do Ativo*</label>
+          <label for="modelo">Modelo Patrimonial do Ativo</label>
           <select name="modelo" id="modelo">
-            <option disabled value="0">Selecione um modelo</option>
             <option value="1">OptiPlex Micro</option>
             <option value="2">Vostro Small Dell</option>
             <option value="3">Vostro Small Dell - TI</option>
@@ -29,9 +28,9 @@
             {% endfor %}      
           </select>
         </div>
-
+        
         <div>
-          <label for="grupo_patrimonial">Selecione o Grupo Patrimonial do Ativo*</label>
+          <label for="grupo_patrimonial">Selecione o Grupo Patrimonial do Ativo</label>
           <select name="grupo" id="localizacao_id">
             <option value="1">Computador</option>
             <option value="2">Periférico</option>
@@ -43,7 +42,7 @@
         </div>
 
         <div class="ativos-local">
-          <label for="localizacao">Departamento do Ativo*</label>
+          <label for="localizacao">Selecione o departamento do Ativo</label>
           <div class="ativos-select">
             <select name="localizacao_id" id="localizacao_id">
               <option value="1">Recepção</option>
@@ -70,10 +69,10 @@
         </div>
 
         <div>
-          <label for="valor_ativo">Valor do Ativo*</label>
+          <label for="valor_ativo">Valor do Ativo</label>
           <input id="valor_ativo" type="number" placeholder="Digite do valor do ativo">
         </div>
-        
+
         <button type="submit">Enviar</button>
         <a href="{{ url_for('ativos') }}">Ver cadastros</a>
       </form>
