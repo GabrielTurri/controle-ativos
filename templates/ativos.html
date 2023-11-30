@@ -4,29 +4,32 @@
 
   <div>
     <h2>Ativos Cadastrados</h2>
-
-    {% for patrimonio in ativos %}
-    <div>
-      <div>      
-        <p><b>Código do Patrimônio: {{ patrimonio }}</b></p>
-        <p>Modelo do Patrmônio: {{ ativos[patrimonio] }}</p>
-        <!-- <p>Fabricante do Ativo</p>
-        <p>Descrição do Ativo</p>          
-        <p>Número de série do Ativo</p> -->
-        <p>Data de vencimento da garantia do Ativo: </p>
-        <p>Data de aquisição da garantia do Ativo: </p>
-        <p>Data de desativação do Ativo: </p>
-        <p>Valor do Ativo: </p>
-        <p>Grupo Patrimonial do Ativo: </p>
-        <p>Selecione a localização do Ativo: </p> 
-      </div>
-      <div>
-        <a href="">Editar</a>
-        <a href="">Excluir</a>
-      </div>
-    </div>
-    <hr>
-    {% endfor %}
-  </div>
+    <table>
+      <tr>
+        <th>ID do Ativo</th>
+        <th>Código do Patrimônio</th>
+        <th>Grupo Patrimonial do Ativo</th>
+        <th>Departamento</th>
+        <th>Valor do Ativo</th>
+        <th>Data de aquisição do ativo</th>
+        <th>Data de vencimento da garantia do ativo</th>
+        <th>Data de desativacao do ativo</th>
+        <th>Editar</th>
+        <th>Excluir</th>
+      </tr>
+        {% for patrimonio in ativos %}
+        <tr>
+          <td>id</td>
+          <td>{{ patrimonio }}</td>
+          <td>{{ ativos[patrimonio] }}</td>
+          <td>R$00,00</td>
+          <td>Data de aquisição do ativo</td>
+          <td>Data de vencimento da garantia do ativo</td>
+          <td>Data de desativacao do ativo</td>
+          <td><a href="">Excluir</a></td>
+          <td><a href="">Editar</a></td>
+        </tr>
+        {% endfor %}
+    </table>
 
 {% endblock %}
